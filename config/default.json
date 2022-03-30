@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://localhost/UnInkMe",
+    "jwtSecret": "sl_mySecret"
+}

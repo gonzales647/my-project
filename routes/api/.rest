@@ -1,0 +1,36 @@
+
+
+
+//this is a test to see if my routes are working 
+
+POST http://localhost:8080/api/users HTTP/1.1
+content-type: application/json
+
+{   
+    "name": "sparky",
+    "email": "sparky@42",
+    "password": "Password1!",
+    "password2": "Password1!"
+}
+
+###
+
+POST http://localhost:8080/api/users/services/newservice HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTM2MDQ4MmJkMmY5MjY0ODQ0ZTRhOCIsImlhdCI6MTYwNDU0MjUzNywiZXhwIjoxNjA0NTQ2MTM3fQ.0O7ILlQDNgIpB6u9rxZrSEsBHMHrH4h8D81nTiYLqFg
+
+{   
+   "user_id": "5fa360482bd2f9264844e4a8",
+   "service": "butthole bleach",
+   "description": "Please help i got a dirty dirty hole" 
+}
+###
+
+GET http://localhost:8080/api/users/services/getservices HTTP/1.1
+content-type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTM2MDQ4MmJkMmY5MjY0ODQ0ZTRhOCIsImlhdCI6MTYwNDU0MjUzNywiZXhwIjoxNjA0NTQ2MTM3fQ.0O7ILlQDNgIpB6u9rxZrSEsBHMHrH4h8D81nTiYLqFg
+
+{   
+   "user_id": "5fa360482bd2f9264844e4a8"
+}
+
